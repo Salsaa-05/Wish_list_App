@@ -26,18 +26,40 @@ class App extends Component {
     this.setState({
       courses: courses,
       current : ''
-    })
-
+    }) 
   }
+
+//Remove function that I want to pass it as props to the child component
+deleteCourse = (index) =>{
+ let courses = this.state.courses;
+ courses.splice(index , 1);
+ this.setState({
+   courses 
+ })
+}
+
+
+//edit button update
+editCourse= (index,value) => {
+  let courses = this.state.courses;
+  let course = courses[index];
+  course['name'] = value ;
+  this.setState({
+    courses
+  })
+}
+
+
+
   render() {
     const { courses } = this.state;
     const courseList = courses.map((course, index) => {
-      return <CourseList details={course} key={index} update={this.handleChange} />
+      return <CourseList details={course} key={index} index={index} update={this.handleChange} deleteCourse={this.deleteCourse} editCourse = {this.editCourse} />
     })
     return (
       <section className="App">
         <h2>Add courses</h2>
-        <CourseForm updateCourse={this.updateCourse} addCourse={this.addCourse} currentvalue ={this.state.current} />
+        <CourseForm updateCourse={this.updateCourse} addCourse={this.addCourse} currentvalue={this.state.current} />
         <ul>{courseList}</ul>
       </section>
     );
