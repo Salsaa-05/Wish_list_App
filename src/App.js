@@ -20,42 +20,54 @@ class App extends Component {
   //adding
   addCourse = (e) => {
     e.preventDefault();
-    let current = this.state.current;
+
+   let current = this.state.current;
     let courses = this.state.courses;
-    courses.push({ name: current })
+    if(e.target.name===current){
+      return false
+    }else{
+       courses.push({ name: current })
     this.setState({
       courses: courses,
-      current : ''
-    }) 
+      current: ''
+    })
+    }
+      
+    
+   
+}
+   
+  
+
+  //Remove function that I want to pass it as props to the child component
+  deleteCourse = (index) => {
+    let courses = this.state.courses;
+    courses.splice(index, 1);
+    this.setState({
+      courses
+    })
   }
 
-//Remove function that I want to pass it as props to the child component
-deleteCourse = (index) =>{
- let courses = this.state.courses;
- courses.splice(index , 1);
- this.setState({
-   courses 
- })
-}
 
-
-//edit button update
-editCourse= (index,value) => {
-  let courses = this.state.courses;
-  let course = courses[index];
-  course['name'] = value ;
-  this.setState({
-    courses
-  })
-}
+  //edit button update
+  editCourse = (index, value) => {
+    let courses = this.state.courses;
+    let course = courses[index];
+    course['name'] = value;
+    this.setState({
+      courses
+    })
+  }
 
 
 
   render() {
     const { courses } = this.state;
-    const courseList = courses.map((course, index) => {
-      return <CourseList details={course} key={index} index={index} update={this.handleChange} deleteCourse={this.deleteCourse} editCourse = {this.editCourse} />
-    })
+    let length = courses.length;
+
+    const courseList = length ? courses.map((course, index) => {
+      return <CourseList details={course} key={index} index={index} update={this.handleChange} deleteCourse={this.deleteCourse} editCourse={this.editCourse} />
+    }) : (<p>Add Course</p>)
     return (
       <section className="App">
         <h2>Add courses</h2>
@@ -69,3 +81,5 @@ editCourse= (index,value) => {
 
 
 export default App;
+
+//Salsaa-05
