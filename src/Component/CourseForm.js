@@ -4,7 +4,7 @@ const CourseForm = (props) =>{
     return(
         <form onSubmit={props.addCourse}>
             <input type="text" value={props.currentvalue} onChange={props.updateCourse}/>
-            <button type="submit">Add Course</button>
+            <button type="submit">Add</button>
 
         </form>
     )

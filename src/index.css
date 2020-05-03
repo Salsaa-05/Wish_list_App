@@ -5,21 +5,31 @@
 
 body {
   margin: 0;
- background: maroon;
+ background:url(./untitled\ \(4\).png);
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 h2 {
-background: maroon;
+  font-size: 50px;
+ color: #bc2e1e;
+  background: #925858;
+  text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+  color: #bc2e1e;
+  background:transparent;
 padding: 18px;
 color:#fff;
+text-align: center;
 }
 
 .App{
   padding: 30px;
-  background: mediumaquamarine;
+  
+  background:transparent;
   width: 80%;
   margin: 50px auto;
-  box-shadow: 1px 2px 5px #eee;
+  margin-top: 10%;
+ 
 }
 
 
@@ -28,12 +38,14 @@ input{
   border:0;
   padding: 6px 10px;
   background: mintcream;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 button{
   width: 20%;
   border: 0;
-  padding: 6px 0;
+  padding: 15px 0;
   margin: 0;
   outline: 0;
   color: #fff;
@@ -53,13 +65,14 @@ li{
 li span{
   display: inline-block;
   width: 60%;
-  color: #0e3fdf
+  color: #edeff3
 }
 
 li > button:first-of-type{
   background: #a6a6a6;
   margin-right: 1%;
   width: 19%;
+  color: black ;
 }
 
 li > button:last-of-type{
@@ -69,4 +82,11 @@ li > button:last-of-type{
 
 ul > form {
   margin : 15px 0 
+}
+
+
+p{
+  color: #FFFFFF;
+
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
 }

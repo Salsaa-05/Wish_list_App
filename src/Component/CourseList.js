@@ -11,8 +11,8 @@ renderCourse = () => {
   return(
     <li>
     <span>{this.props.details.name} </span> 
-    <button onClick={()=> {this.toggleState()}}>Edit Course</button>
-    <button onClick={() => {this.props.deleteCourse(this.props.index)}} >Delete Course</button>
+    <button onClick={()=> {this.toggleState()}}>Edit</button>
+    <button onClick={() => {this.props.deleteCourse(this.props.index)}} >Delete</button>
 
 </li>
   )
@@ -37,7 +37,7 @@ renderUpdateForm = () => {
 return(
 <form onSubmit={this.updateCourseItem}>
 <input type ="text" ref={(v) => {this.input=v}} defaultValue={this.props.details.name}/>
-<button>Update Course</button>
+<button>Update</button>
 
 </form>
 

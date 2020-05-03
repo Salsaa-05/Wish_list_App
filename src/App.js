@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import CourseList from './Component/CourseList'
 import CourseForm from './Component/CourseForm'
+import splended from './1774953.gif'
+
 class App extends Component {
   state = {
     courses: [
       { name: "HTML" },
-      { name: "CSS" },
-      { name: "JavaScript" },
+      { name: "CSS" }
+   
     ],
     current: ''
   }
@@ -59,7 +61,10 @@ class App extends Component {
     })
   }
 
-
+// ;)
+secretCheat =() => {
+alert("Kindly regards for seeing this massage ,that's mean you are deevloper ;well basicly this was ment to be an courses addtion list but then I changed my mind to make it as you can see right now  CMQ nice to see here Salsaa-05 ;)")
+}
 
   render() {
     const { courses } = this.state;
@@ -67,12 +72,19 @@ class App extends Component {
 
     const courseList = length ? courses.map((course, index) => {
       return <CourseList details={course} key={index} index={index} update={this.handleChange} deleteCourse={this.deleteCourse} editCourse={this.editCourse} />
-    }) : (<p>Add Course</p>)
+    }) : (<p onDoubleClick={()=> this.secretCheat()}>Add Something</p>)
     return (
       <section className="App">
-        <h2>Add courses</h2>
+        <h2>Wish list</h2>
         <CourseForm updateCourse={this.updateCourse} addCourse={this.addCourse} currentvalue={this.state.current} />
         <ul>{courseList}</ul>
+  
+        <img src = {splended} alt='stars'  className='img'/>
+        <img src = {splended} alt='stars'  className='img'/>
+        <img src = {splended} alt='stars'  className='img'/>
+        <img src = {splended} alt='stars'  className='img'/>
+        <img src = {splended} alt='stars'  className='img'/>
+        
       </section>
     );
   }
