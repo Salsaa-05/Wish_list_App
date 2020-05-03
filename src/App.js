@@ -6,8 +6,8 @@ import splended from './1774953.gif'
 class App extends Component {
   state = {
     courses: [
-      { name: "HTML" },
-      { name: "CSS" }
+      { name: "Mastering JavaScript Data Structures and Algorithms" },
+      { name: "Having a Driver license" }
    
     ],
     current: ''
@@ -63,7 +63,7 @@ class App extends Component {
 
 // ;)
 secretCheat =() => {
-alert("Kindly regards for seeing this massage ,that's mean you are deevloper ;well basicly this was ment to be an courses addtion list but then I changed my mind to make it as you can see right now  CMQ nice to see here Salsaa-05 ;)")
+alert("Kindly regards for seeing this massage ,that's mean you are deevloper ;well basicly this was ment to be an courses addtion list but then I changed my mind to make it as you can see right now  CMQ nice to see this Salsaa-05 ;)")
 }
 
   render() {
